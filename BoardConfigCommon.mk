@@ -29,6 +29,7 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8974
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 zcache.enabled=1 zcache.compressor=lz4 androidboot.bootdevice=msm_sdcc.1
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
@@ -84,10 +85,10 @@ BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 
 # SELinux
--include device/qcom/sepolicy/sepolicy.mk
-
-BOARD_SEPOLICY_DIRS += \
-    device/samsung/klte-common/sepolicy
+#-include device/qcom/sepolicy/sepolicy.mk
+#
+#BOARD_SEPOLICY_DIRS += \
+#    device/samsung/klte-common/sepolicy
 
 # Sensors
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
