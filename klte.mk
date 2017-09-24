@@ -82,10 +82,6 @@ PRODUCT_PACKAGES += \
     fingerprintd \
     fingerprint.msm8974
 
-# FlipFlap
-PRODUCT_PACKAGES += \
-    FlipFlap
-
 # IPv6 tethering
 PRODUCT_PACKAGES += \
     ebtables \
